@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+</head>
+
+<body>
+<div class="container">
+    <h1 class="mb-4"><%= article.title ;%></h1>
+    <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString() ;%></div>
+
+    <a href="/" class="btn btn-secondary">All articles</a>
+    <a href="/articles/edit/<%= article.id ;%>" class="btn btn-info">Edit</a>
+
+    <div>
+        <%- article.sanitizedHtml ;%>
+    </div>
+</div>
+</body>
+
+</html>
